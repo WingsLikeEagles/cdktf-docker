@@ -13,3 +13,5 @@ RUN npm i --save-dev cdktf@0.7.0
 RUN npm i --save-dev constructs@10.0.9
 RUN npm i --save-dev @cdktf/provider-aws@2.0.13
 RUN npm i --save-dev @types/node
+
+COPY cdktf.json /app/cdktf.json
