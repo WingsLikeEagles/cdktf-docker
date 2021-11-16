@@ -25,3 +25,15 @@ RUN npm i --save-dev @types/node
 
 Standard alpine image with the dependencies installed. Executing is a matter or running docker run with the volume mounted , managed to get it to CI/CD pipeline with this given that docker is available in your CI/CD tool
 ```
+
+# Build the container  
+This requires a file in the current directory named cdktf.json and the Dockerfile both from this repo.
+`docker build -t cdktf-docker .`  
+
+# Run the container  
+`docker run --rm --name cdktf -i cdktf-docker:latest cdktf convert --language python`  
+
+# Pip something in to the container  
+`cat my_super_awesome_stuff.tf | docker run --rm --name cdktf-docker -i cdktf-docker:latest cdktf convert --language python`  
+  
+  
