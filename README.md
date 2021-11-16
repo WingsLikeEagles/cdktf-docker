@@ -1,9 +1,9 @@
 # cdktf-docker
-Docker implmentation of CDKTF for Terraforming
+Docker implmentation of CDKTF for Terraforming  
 
-Initial credit goes to https://www.reddit.com/user/SnooPears9582/
-From his post at https://www.reddit.com/r/Terraform/comments/qqqe8r/executing_cdktf_from_within_a_container/
-
+Initial credit goes to https://www.reddit.com/user/SnooPears9582/  
+From his post at https://www.reddit.com/r/Terraform/comments/qqqe8r/executing_cdktf_from_within_a_container/  
+  
 ```
 Found a solution.
 
