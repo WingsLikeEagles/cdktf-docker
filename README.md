@@ -27,7 +27,7 @@ Standard alpine image with the dependencies installed. Executing is a matter or 
 ```
 
 # Build the container  
-This requires a file in the current directory named cdktf.json and the Dockerfile both from this repo.
+This requires a file in the current directory named cdktf.json and the Dockerfile both from this repo.  
 `docker build -t cdktf-docker .`  
 
 # Run the container  
