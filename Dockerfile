@@ -17,10 +17,8 @@ RUN npm i --save-dev @types/node && npm prune --production
 
 COPY cdktf.json /app/cdktf.json
 
-COPY bin/python3/*.deb /app/bin/python3/
-RUN apt-get install -y /app/bin/python3/*.deb && rm -rf /var/lib/apt/lists/* && rm -rf /app/bin/python3
-RUN pip3 install --upgrade pip # Use pip to upgrade itself, the one in the Buster repo is too old
-RUN pip3 install 'poetry>=1.0.0'
+COPY bin/python3/*.deb bin/python3/*.whl bin/python3/poetry/*.whl /app/bin/python3/
+RUN apt-get install -y /app/bin/python3/*.deb && rm -rf /var/lib/apt/lists/* && python3 -m pip install --upgrade /app/bin/python3/pip-21.3.1-py3-none-any.whl && python3 -m pip install /app/bin/python3/*.whl && rm -rf /app/bin/python3
 
 RUN apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
 
