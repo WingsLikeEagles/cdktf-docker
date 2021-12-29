@@ -10,6 +10,10 @@ This requires a file in the current directory named cdktf.json and the Dockerfil
 `docker build -t cdktf-docker .`  
 
 # Run the container  
+Test it's working first by running the help command.  
+`docker run --rm --name cdktf -i cdktf-docker:latest cdktf help`  
+
+Try a command like this (don't forget to map in a volume or pipe like the below example) - need to add instructions here
 `docker run --rm --name cdktf -i cdktf-docker:latest cdktf convert --language python`  
 
 # Pip something in to the container  
