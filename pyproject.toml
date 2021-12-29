@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "DI2E-CDKTF"
+name = "CDKTF"
 version = "1.0.0"
 description = ""
 authors = []
