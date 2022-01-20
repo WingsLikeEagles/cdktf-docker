@@ -16,6 +16,12 @@ Test it's working first by running the help command.
 Try a command like this (don't forget to map in a volume or pipe like the below example) - need to add instructions here
 `docker run --rm --name cdktf -i cdktf-docker:latest cdktf convert --language python`  
 
+To initialize a new project:
+```
+mkdir your_project    
+docker run --rm -v $(pwd)/your_project --name cdktf -i cdktf-docker:latest cdktf init --local  
+```
+
 # Pip something in to the container  
 `cat my_super_awesome_stuff.tf | docker run --rm --name cdktf-docker -i cdktf-docker:latest cdktf convert --language python`  
   
