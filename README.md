@@ -19,7 +19,7 @@ Try a command like this (don't forget to map in a volume or pipe like the below 
 To initialize a new project:
 ```
 mkdir your_project    
-docker run --rm -v $(pwd)/your_project --name cdktf -i cdktf-docker:latest cdktf init --local  
+docker run --rm -v $(pwd)/your_project:/app/temp --name cdktf -it cdktf-docker:latest cdktf init --local  
 ```
 
 # Pip something in to the container  
